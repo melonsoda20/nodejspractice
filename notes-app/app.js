@@ -1,5 +1,13 @@
-const fs = require('fs');
+const validator = require('validator');
+const getNotes = require('./notes');
 
-// fs.writeFileSync('notes.txt', 'My name is Teddy');
+const msg = getNotes();
+console.log(msg);
 
-fs.appendFileSync('notes.txt', 'Test appending');
+console.log(validator.isURL('https/mead.io'));
+
+// const add = require('./utils.js');
+
+// const sum = add(4, -2);
+
+// console.log(sum);
