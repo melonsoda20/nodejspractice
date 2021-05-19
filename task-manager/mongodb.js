@@ -125,11 +125,11 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true }, (error, client) =>
     //     console.log(error);
     // });
 
-    db.collection('tasks').deleteOne({
-        description: "Clean the house"
-    }).then((result) => {
-        console.log(result);
-    }).catch((error) => {
-        console.log(error);
-    });
+    // db.collection('tasks').deleteOne({
+    //     description: "Clean the house"
+    // }).then((result) => {
+    //     console.log(result);
+    // }).catch((error) => {
+    //     console.log(error);
+    // });
 });
