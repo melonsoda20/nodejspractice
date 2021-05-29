@@ -28,17 +28,18 @@ app.listen(port, () => {
     console.log('App listening on port: ' + port);
 });
 
-const jwt = require('jsonwebtoken');
 
-const myFunction = async() => {
-    const token = jwt.sign({ _id: 'abc123' }, 'thisismynewcourse', { expiresIn: '7 days'});
-    console.log(token);
+// const jwt = require('jsonwebtoken');
 
-    const data = jwt.verify(token, 'thisismynewcourse');
-    console.log(data);
-}
+// const myFunction = async() => {
+//     const token = jwt.sign({ _id: 'abc123' }, 'thisismynewcourse', { expiresIn: '7 days'});
+//     console.log(token);
 
-myFunction();
+//     const data = jwt.verify(token, 'thisismynewcourse');
+//     console.log(data);
+// }
+
+// myFunction();
 
 // encrypt algorithm: 
 // teddy -> aiognoisngosnogns -> teddy
