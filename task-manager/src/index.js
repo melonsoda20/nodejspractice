@@ -7,6 +7,30 @@ const taskRouter = require('./routers/task');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// const multer = require('multer');
+// const upload = multer({
+//     dest: 'images',
+//     limits: {
+//         fileSize: 1000000
+//     },
+//     fileFilter(req, file, cb) {
+//         if(!file.originalname.match(/\.(doc|docx)$/)){
+//             return cb(new Error('Please upload a word document'));
+//         }
+
+//         cb(undefined, true);
+//         // cb(new Error('File must be a PDF'));
+//         // cb(undefined, true);
+//     }
+// });
+
+// app.post('/upload', upload.single('upload'), (req, res) => {
+//     res.send();
+// }, (error, req, res, next) => {
+//     res.status(400).send({ error: error.message });
+// });
+
+
 // app.use((req, res, next) => {
 //     if(req.method === 'GET'){
 //         res.send('GET request are disabled');
@@ -28,20 +52,20 @@ app.listen(port, () => {
     console.log('App listening on port: ' + port);
 });
 
-const Task = require('./models/task');
-const User = require('./models/user');
+// const Task = require('./models/task');
+// const User = require('./models/user');
 
-const main = async() => {
-    // const task = await Task.findById('60b22216e9d69d20bcdfc5dd');
-    // await task.populate('owner').execPopulate();
-    // console.log(task.owner);
+// const main = async() => {
+//     // const task = await Task.findById('60b22216e9d69d20bcdfc5dd');
+//     // await task.populate('owner').execPopulate();
+//     // console.log(task.owner);
 
-    const user = await User.findById('60b22206e9d69d20bcdfc5db');
-    await user.populate('tasks').execPopulate();
-    console.log(user.tasks);
-};
+//     const user = await User.findById('60b22206e9d69d20bcdfc5db');
+//     await user.populate('tasks').execPopulate();
+//     console.log(user.tasks);
+// };
 
-main();
+// main();
 
 
 // const jwt = require('jsonwebtoken');
